@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Deep Learning</title>
+
+		<meta name="description" content="Geospatial tech seminar">
+		<meta name="author" content="Haoran Cai">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Introduction to Deep Learning</h1>
+			  <h3>Geospatial tech seminar</h3>
+			  
+			  <a href="mailto:haoran.cai@climate.com">Haoran Cai</a>
+			  <p style="font-size:80%">Geospatial team</p>
+			  <p style="font-size:100%"> The Climate Corporation </p>
+				</section>
+
+			  <section data-background-iframe="http://how-old.net/">
+			        		                			
+			  </section>
+
+			  <section>
+		          <h4> Beyond face detection... </h4> 
+			  <p>We will run a <em style="color:red">general object
+			  detection </em> demo right on our GPU server using
+			  state-of-the-art deep learning detection
+			  algorithm RCNN.</p>
+			  <img
+			  src="https://pdollar.files.wordpress.com/2013/12/r-cnn.png">
+			  <p  style="font-size:50%"> <cite>Girshick, Ross, et al. "Rich feature hierarchies for accurate object detection and semantic segmentation." Computer Vision and Pattern Recognition (CVPR), 2014 IEEE Conference on. IEEE, 2014. </cite></p>
+			  </section>
+			  
+			  
+			        <section data-background-iframe="http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg">
+			  </section>
+			  
+			  <section>
+
+			  <section>
+			  <h4> Beyond image classification... </h4>
+			  <p>We will fine tune the award winning deep
+			  learning model(Alexnet) for a much harder
+			  task: <em style="color:red">style
+			  recognition.</em> </p>
+			  
+			  <img src="https://1.bp.blogspot.com/-TE9BUs2F8XA/VRMo02YyWcI/AAAAAAAAN3Y/5v8-Zc8cFy4/s1600/alexnet.png">
+			 <p  style="font-size:50%"> <cite>Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012. </cite></p>
+			  </section>
+			  
+			  <section data-background-iframe="http://demo.vislab.berkeleyvision.org/data/flickr/style_Romantic/1">
+			  </section>
+
+			  <section data-background-iframe="http://demo.vislab.berkeleyvision.org/data/flickr/style_Sunny/1">
+			  
+			  </section>
+			  <section data-background-iframe="http://demo.vislab.berkeleyvision.org/data/flickr/style_Hazy/1">
+			  
+			  </section>
+			  </section>
+			  
+
+<section>
+<section>
+<h4> What is Neural Network </h4>
+</section>
+
+			  <section>
+			  <h4> Structure of Neural Network </h4>
+			  <img
+			  src="http://www.nature.com/nature/journal/v521/n7553/images/nature14539-f1.jpg"
+			  alt="nn_nature" style="width: 80%;"/>
+                 	  <p  style="font-size:50%"> <cite>LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444. </cite></p>
+			  </section>
+</section>
+<section>
+<section>
+<h4> Why we need neural network structure? </h4>
+</section>
+<section data-markdown>
+<script>
+<h4> Biologically inspired?? </h4>
+
+<p class="fragment" > Michael Jordan: "cartoon models". </p>
+<p class="fragment" > I agree with him... </p>
+
+![features](http://www.geeky-gadgets.com/wp-content/uploads/2011/07/Brain-epicness1.jpg)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+#### __Universal approximation theorem__
+
+>Any continuous function from $[0, 1]^n$ to $\mathbb{R}$ can be approximated __arbitrarily well__ by a linear output, __two layer__ neural network defined in with a __sufficiently large__ number of hidden units.
+</script>
+</section>
+</section>
+
+<section>
+<section>
+<h4> Why we want to go deep? </h4>
+</section>
+<section>
+<h4> Multiple levels of representation </h4>
+<img src="intro_dl_images/multi.png" alt="cnn_embedding"
+style="width:900;height:500;">
+<p  style="font-size:50%"> <cite>Lee, Honglak. Unsupervised feature learning via sparse hierarchical representations. Stanford University, 2010.</cite></p>
+</section>
+
+<section>
+<h4> The unreasonable effectiveness of deep features: transfer learning </h4>
+<img src="intro_dl_images/transfer.png" alt="transfer">
+</section>
+
+<section
+  data-background="http://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg"
+  data-background-size="1000px">
+</section>
+
+    <section>
+    <h4> Our Ultimate goal: end-to-end learning </h4>
+    <img src="intro_dl_images/application.png" alt="application"
+    width:"100" height:"2" style="width: 90%;">    
+    
+
+</section>    
+</section>
+
+  <section>
+  <section>
+  <h4> What is Google's Deep Dream? </h4>
+  </section>
+    <section>
+<a class="twitter-timeline" href="https://twitter.com/hashtag/deepdreams" data-widget-id="628447181226184704">#deepdreams Tweets</a>
+<script>!function(d,s,id){var
+js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </section>
+
+    <section>
+    <h4> Illustration of Deep Dream </h4>
+    <ul>
+      <li> Simply feed the network an arbitrary image or photo and let the network analyze the picture. We then pick a layer and ask the network to enhance whatever it detected.
+      <li> <p class="fragment">Essentially it is just a gradient
+    ascent process that tries to maximize the L2 norm of activations
+      of a particular deep neural network layer</p>
+      <li> <p class="fragment"> Let's make our own dream!</p>
+    </ul>
+    </section>
+    
+    </section>
+
+    <section>
+    <section>
+    <h4> How to train deep architectures? </h4>
+    </section>
+
+    <section>
+    <h4> Layerwise Unsupervised Pre-Training </h4>
+    <img src="intro_dl_images/nnet_001.png" alt="pretraining"
+      style="width: 80%;" >
+    </section>
+
+    <section>
+    <h4> Dropout </h4>
+    <img src="intro_dl_images/dropout1.png" alt="dropout1" style="width: 70%;">
+    <img src="intro_dl_images/dropout2.png" alt="dropout2"
+    style="width: 70%;">
+    <p  style="font-size:50%"> <cite>Srivastava, Nitish, et al. "Dropout: A simple way to prevent neural networks from overfitting." The Journal of Machine Learning Research 15.1 (2014): 1929-1958.</cite></p>
+    </section>
+
+    <section>
+    <h4> Big data era, Power of GPU </h4>
+    <iframe width="860" height="515" src="https://www.youtube.com/embed/-P28LKWTzrI?rel=0" frameborder="0" allowfullscreen></iframe>
+    </section>
+    </section>
+
+    <section>
+
+    <section>
+    <h4> What is the most popular deep architectures? </h4>
+    <p class="fragment" style="color:red" > Convolutional Neural Network (CNN)</p>
+    </section>
+
+    <section>
+    <h4> 1D sequence </h4>
+    <img src="intro_dl_images/first.png">
+    <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Fully connected layer </h4>
+    <img src="intro_dl_images/second.png">
+     <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Convolutional layer </h4>
+    <img src="intro_dl_images/third.png">
+     <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Convolutional layer </h4>
+    <img src="intro_dl_images/fourth.png">
+     <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Stacked convolutional layer </h4>
+<img src="intro_dl_images/fifth.png">
+ <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Max-polling layer </h4>
+<img src="intro_dl_images/max.png">
+ <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> 2D convolutional layer </h4>
+<img src="intro_dl_images/2d.png" style="width: 85%;">
+ <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Stacked 2D convolutional layer </h4>
+<img src="intro_dl_images/stacked2d.png" style="width: 85%;">
+ <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Put them together... </h4>
+<img src="intro_dl_images/full.png" style="width: 70%;" >
+ <p style="font-size:50%">Picture source: <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Christopher Olah's Blog</a> </p>
+    </section>
+
+    <section>
+    <h4> Here comes the 3D structure... </h4>
+     <img src="https://1.bp.blogspot.com/-TE9BUs2F8XA/VRMo02YyWcI/AAAAAAAAN3Y/5v8-Zc8cFy4/s1600/alexnet.png">
+			 <p  style="font-size:50%"> <cite>Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012. </cite></p>
+    </section>
+    </section>
+<section>
+<section>
+<h4> What I havn't covered here? </h4>
+</section>
+
+<section>
+<h4> deep boltzmann machines </h4>
+<p style="float: left; font-size: 9pt; text-align: center; width: 30%;
+margin-right: 1%; margin-bottom: 0.5em;"><img
+src="intro_dl_images/original.png" style="width: 100%">Original</p>
+<p style="float: left; font-size: 9pt; text-align: center; width: 30%;
+margin-right: 1%; margin-bottom: 0.5em;"><img
+src="intro_dl_images/random.png" style="width: 100%">Masked</p>
+<p style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="intro_dl_images/inpainting.png" style="width: 100%">Inpainted</p>
+<p style="clear: both;">
+<img
+src="http://file.memeplex.blog.shinobi.jp/restrictedBoltzmannMachineImage.png"
+style="width: 50%;">
+</section>
+
+<section>
+<h4> Image understanding </h4>
+<img
+src="http://www.nature.com/nature/journal/v521/n7553/images/nature14539-f3.jpg"
+style="width: 80%;">
+ <p  style="font-size:50%"> <cite>LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444. </cite></p>
+</section>
+
+<section data-background="http://metaoptimize.s3.amazonaws.com/cw-embeddings-ACL2010/embeddings-mostcommon.EMBEDDING_SIZE=50.png">
+<h4> Natural Language Processing: word embedding 
+</section>
+</section>
+
+    <section>
+    <h4> Demo Time </h4>
+    </section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src:'plugin/notes/notes.js', async: true },
+		{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
